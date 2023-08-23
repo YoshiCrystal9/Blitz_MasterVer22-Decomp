@@ -64,7 +64,7 @@ def main():
     parser = argparse.ArgumentParser(
         "setup.py", description="Set up the Splatoon 2 3.1.0 decompilation project")
     parser.add_argument("original_nso", type=Path,
-                        help="Path to the original NSO (1.0, compressed or not)", nargs="?")
+                        help="Path to the original NSO (3.1.0, compressed or not)", nargs="?")
     args = parser.parse_args()
 
     setup.install_viking()
