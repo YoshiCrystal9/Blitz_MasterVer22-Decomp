@@ -18,8 +18,11 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(BLITZ)
+add_executable(BLITZ
+        src/Game/Bullet/GameBulletBombChase.cpp
+        include/Game/Bullet/GameBulletBombChase.h)
 
+target_include_directories(BLITZ PRIVATE include)
 target_include_directories(BLITZ PRIVATE src)
 target_compile_definitions(BLITZ PRIVATE NON_MATCHING)
 target_compile_options(BLITZ PRIVATE -fno-rtti -fno-exceptions)

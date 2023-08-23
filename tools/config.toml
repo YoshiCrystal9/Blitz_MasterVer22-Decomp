@@ -1,5 +1,5 @@
 functions_csv = "data/blitz_functions.csv"
-build_target = "Blitz"
+build_target = "BLITZ"
 
 [decomp_me]
 compiler_name = "clang-4.0.1"
