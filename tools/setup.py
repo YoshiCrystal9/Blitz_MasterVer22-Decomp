@@ -77,3 +77,6 @@ def main():
     prepare_executable(args.original_nso)
     setup.set_up_compiler("4.0.1")
     create_build_dir()
+    
+if __name__ == "__main__":
+    main()
