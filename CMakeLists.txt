@@ -1,0 +1,66 @@
+cmake_minimum_required(VERSION 3.13)
+project(Blitz_MasterVer22 CXX)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+# Use response files when linking objects because of the large number of source files
+set(CMAKE_CXX_USE_RESPONSE_FILE_FOR_OBJECTS ON)
+if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+  add_compile_options(-fdiagnostics-color=always)
+elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+  add_compile_options(-fcolor-diagnostics)
+  # Required to silence "unused argument" warnings for -stdlib=libc++ when using distcc
+  add_compile_options(-Wno-unused-command-line-argument)
+  # Required to fix source paths in debug info when using distcc
+  add_compile_options(-fdebug-prefix-map=/tmp=${CMAKE_CURRENT_BINARY_DIR})
+endif()
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+file(GLOB_RECURSE SOURCES_GAME ${PROJECT_SOURCE_DIR}/src/*.cpp ${PROJECT_SOURCE_DIR}/src/*.c ${PROJECT_SOURCE_DIR}/src/*.hpp ${PROJECT_SOURCE_DIR}/src/*.h)
+file(GLOB_RECURSE SOURCES_AL ${PROJECT_SOURCE_DIR}/lib/al/*.cpp ${PROJECT_SOURCE_DIR}/lib/al/*.c ${PROJECT_SOURCE_DIR}/lib/al/*.h ${PROJECT_SOURCE_DIR}/lib/al/*.hpp)
+
+add_executable(Blitz_MasterVer22 ${SOURCES_GAME} ${SOURCES_AL})
+
+# Writing sources to a file so build.py script knows the sources
+set(SOURCES_OUTPUT_FILE "${CMAKE_BINARY_DIR}/.build_sources")
+file(WRITE ${SOURCES_OUTPUT_FILE} "")
+
+get_target_property(SOURCES_COMBINED Blitz_MasterVer22 SOURCES)
+
+foreach (SOURCE ${SOURCES_COMBINED})
+  file(APPEND ${SOURCES_OUTPUT_FILE} "${SOURCE}\n")
+endforeach()
+
+target_include_directories(Blitz_MasterVer22 PRIVATE src)
+target_compile_definitions(Blitz_MasterVer22 PRIVATE NON_MATCHING)
+target_compile_options(Blitz_MasterVer22 PRIVATE -fno-rtti -fno-exceptions)
+target_compile_options(Blitz_MasterVer22 PRIVATE -Wall -Wextra -Wdeprecated)
+target_compile_options(Blitz_MasterVer22 PRIVATE -Wno-unused-parameter -Wno-unused-private-field)
+target_compile_options(Blitz_MasterVer22 PRIVATE -fno-strict-aliasing)
+target_compile_options(Blitz_MasterVer22 PRIVATE -Wno-invalid-offsetof)
+
+set(NN_SDK_MAJOR 3)
+set(NN_SDK_MINOR 5)
+set(NN_SDK_PATCH 1)
+set(NN_SDK_TYPE "Release")
+
+set(NN_WARE_MAJOR 3)
+set(NN_WARE_MINOR 5)
+set(NN_WARE_PATCH 1)
+
+include_directories(lib)
+include_directories(lib/aarch64)
+
+add_subdirectory(lib/NintendoSDK)
+target_link_libraries(Blitz_MasterVer22 PUBLIC NintendoSDK)
+
+add_subdirectory(lib/sead)
+target_link_libraries(Blitz_MasterVer22 PUBLIC sead)
+
+add_subdirectory(lib/agl)
+target_link_libraries(Blitz_MasterVer22 PUBLIC agl)
+
+add_subdirectory(lib/eui)
+target_link_libraries(Blitz_MasterVer22 PUBLIC eui)

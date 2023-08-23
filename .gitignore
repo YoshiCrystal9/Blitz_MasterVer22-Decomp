@@ -1,0 +1,41 @@
+# Binaries
+*.so
+*.dll
+*.elf
+*.nso
+dist/
+build/
+build-*/
+bin/
+
+# IDEs
+.idea/
+.vscode/
+.cache/
+.DS_Store
+/cmake-build-*
+
+# IDA
+*.id0
+*.id1
+*.id2
+*.idb
+*.i64
+*.nam
+*.til
+
+# Ghidra
+*.gpr
+*.rep/
+*.lock
+
+# Debugging
+perf.data
+perf.data.old
+.gdb_history
+
+# Tooling
+/toolchain/clang-*
+tools/check
+tools/listsym
+tools/decompme
