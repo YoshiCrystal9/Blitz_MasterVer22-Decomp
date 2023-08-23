@@ -51,7 +51,7 @@ set(NN_WARE_MINOR 5)
 set(NN_WARE_PATCH 1)
 
 include_directories(lib)
-include_directories(lib/aarch64)
+#include_directories(lib/aarch64)
 
 add_subdirectory(lib/NintendoSDK)
 target_link_libraries(Blitz_MasterVer22 PUBLIC NintendoSDK)
@@ -61,6 +61,3 @@ target_link_libraries(Blitz_MasterVer22 PUBLIC sead)
 
 add_subdirectory(lib/agl)
 target_link_libraries(Blitz_MasterVer22 PUBLIC agl)
-
-add_subdirectory(lib/eui)
-target_link_libraries(Blitz_MasterVer22 PUBLIC eui)
