@@ -1,0 +1,18 @@
+[submodule libsead]
+	path = libsead
+	url = httpsgithub.comopen-eadsead
+[submodule libNintendoSDK]
+	path = libNintendoSDK
+	url = httpsgithub.comopen-eadnnheaders
+[submodule libagl]
+	path = libagl
+	url = httpsgithub.comopen-eadagl
+[submodule toolchainmusl]
+	path = toolchainmusl
+	url = httpsgithub.comopen-eadbotw-lib-musl
+[submodule toolscommon]
+	path = toolscommon
+	url = httpsgithub.comopen-eadnx-decomp-tools
+[submodule libeui]
+	path = libeui
+	url = httpsgithub.comopen-eadeui
