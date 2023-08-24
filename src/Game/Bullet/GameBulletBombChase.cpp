@@ -10,9 +10,7 @@ namespace Game{
 
     }
 
-    BulletBombChase::~BulletBombChase(){
-
-    }
+    BulletBombChase::~BulletBombChase()= default;
 
     /*
     int BulletBombChase::reset(Cmn::Def::ResetType) {
@@ -20,7 +18,7 @@ namespace Game{
     }
      */
 
-    //int BulletBombChase::initializeSender(const int *, int, int, const sead::Vector3f &, const sead::Vector3f &, short, const int *, const int *, bool, unsigned int, unsigned int) {}
+    //int BulletBombChase::initializeSender(const int *, int, int, const sead::Vector3<float> &, const sead::Vector3<float> &, short, const int *, const int *, bool, unsigned int, unsigned int) {}
 
     int BulletBombChase::getSameBombChaseBurstGameFrameNum(unsigned int) const {}
 
@@ -68,5 +66,5 @@ namespace Game{
         return false;
     }
 
-    void BulletBombChase::setCurPos(sead::Vector3f const&) {}
+    void BulletBombChase::setCurPos(sead::Vector3<float> const&) {}
 }
