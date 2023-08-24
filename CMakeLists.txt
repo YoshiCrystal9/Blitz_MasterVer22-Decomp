@@ -48,6 +48,15 @@ add_executable(BLITZ
         src/Game/DesignerObj/GameDesignerObj.cpp
         src/Game/Gateway/GameGatewayBase.cpp
         src/Game/InkPond/Octa/GameInkPondOcta.cpp
+        src/Game/Item/GameItemCardKey.cpp
+        src/Game/Item/GameItemIkura.cpp
+        src/Game/Item/Octa/GameItemCardKeyOcta.cpp
+        src/Game/Item/Octa/GameItemIkuraOcta.cpp
+        src/Game/BaseCamp/Octa/GameBaseCampNpcLocatorOcta.cpp
+        src/Game/AirBall/GameAirBall.cpp
+        src/Game/AirBall/GameAttachableAirBall.cpp
+        src/Game/Decoy/GameDecoy.cpp
+        src/Game/GameExplanationText.cpp
 )
 
 target_include_directories(BLITZ PRIVATE include)

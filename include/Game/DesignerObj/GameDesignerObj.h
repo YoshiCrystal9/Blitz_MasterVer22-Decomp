@@ -8,6 +8,10 @@ namespace Game {
         bool isHalfDrawFPS_() const;
     };
 
+    class DesignerObjNoCulling{
+    public:
+        bool isAbleToBeCulled() const;
+    };
 } // Game
 
 #endif //BLITZ_GAMEDESIGNEROBJ_H
