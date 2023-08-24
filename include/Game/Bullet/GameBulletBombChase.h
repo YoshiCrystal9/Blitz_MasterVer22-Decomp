@@ -6,6 +6,7 @@
 #include "Game/Cmn/CmnDef.h"
 #include "Game/SighterTarget/GameSighterTarget.h"
 #include "Game/EnemyBase/GameEnemyBase.h"
+#include "Lp/Sys/LpSys.h"
 
 namespace Game{
     class BulletBombChase{
@@ -15,17 +16,17 @@ namespace Game{
         int reset(Cmn::Def::ResetType);
         int initializeSender(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3f const&, short, Game::SighterTarget const*, Game::EnemyBase const*, bool, unsigned int, unsigned int);
         int getSameBombChaseBurstGameFrameNum(unsigned int) const;
-        //virtual int initialize_(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3<float> const&, short, Game::SighterTarget const*, Game::EnemyBase const*, bool, bool, unsigned int) = 0;
-        //virtual int initializeReceiver(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3f const&, short, unsigned int, unsigned int) = 0;
+        int initialize_(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3f const&, short, Game::SighterTarget const*, Game::EnemyBase const*, bool, bool, unsigned int);
+        int initializeReceiver(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3f const&, short, unsigned int, unsigned int);
         void setXLinkLocalPropertyDefinition();
         void enter();
-        void genMessage();
+        //void genMessage(Lp::Sys::HioContext*);
         float getCheckColSkipNrmDot();
         char* getClassName() const;
         char* getWeaponName() const;
         bool hasAttackerPriority_() const;
         bool isBulletThrough() const;
-        bool isCheckNoPaintBackCollision(sead::Vector3<float> const&, sead::Vector3<float> const&) const;
+        bool isCheckNoPaintBackCollision(sead::Vector3f const&, sead::Vector3f const&) const;
         bool isNoBurst() const;
         bool isUseMuzzlePos() const;
         void setCurPos(sead::Vector3f const&);

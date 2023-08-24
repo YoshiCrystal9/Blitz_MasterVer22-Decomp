@@ -28,6 +28,26 @@ add_executable(BLITZ
         src/Game/Cmn/CmnActor.cpp
         src/Game/EnemyBase/GameEnemyBase.cpp
         src/Game/SighterTarget/GameSighterTarget.cpp
+        include/Lp/Sys/LpSys.h
+        src/Lp/Sys/LpSys.cpp
+        src/Lp/Utl/LpUtl.cpp
+        src/Game/Cmn/CmnSaveData.cpp
+        src/Game/Cmn/CmnGachiParamInfo.cpp
+        src/Game/Cmn/CmnBgmExecution.cpp
+        src/Game/Cmn/CmnSceneBgm.cpp
+        src/Game/Cmn/CmnSceneBridgeBgm.cpp
+        src/Game/Cstm/CstmResMgr.cpp
+        src/Game/Cstm/CstmDbgMode.cpp
+        src/Game/Cstm/CstmParamMgr.cpp
+        src/Game/Cstm/CstmXLinkMgr.cpp
+        src/Game/MapObj/GameMapObjBase.cpp
+        src/Game/RivalSquad/GameRivalSquad.cpp
+        src/Game/SeqMgr/GameSeqMgrBase.cpp
+        src/Game/Switch/GameSwitchBase.cpp
+        src/Game/DemoObj/GameDemoObjBase.cpp
+        src/Game/DesignerObj/GameDesignerObj.cpp
+        src/Game/Gateway/GameGatewayBase.cpp
+        src/Game/InkPond/Octa/GameInkPondOcta.cpp
 )
 
 target_include_directories(BLITZ PRIVATE include)

@@ -18,9 +18,9 @@ namespace Game{
 
     int BulletBombChase::getSameBombChaseBurstGameFrameNum(unsigned int) const {}
 
-    //void BulletBombChase::initialize_(){};
+    int BulletBombChase::initialize_(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3<float> const&, short, Game::SighterTarget const*, Game::EnemyBase const*, bool, bool, unsigned int){};
 
-    //void BulletBombChase::initializeReceiver(){};
+    int BulletBombChase::initializeReceiver(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3f const&, short, unsigned int, unsigned int){};
 
     void BulletBombChase::enter() {}
 
@@ -62,5 +62,5 @@ namespace Game{
         return false;
     }
 
-    void BulletBombChase::setCurPos(sead::Vector3<float> const&) {}
+    void BulletBombChase::setCurPos(sead::Vector3f const&) {}
 }
