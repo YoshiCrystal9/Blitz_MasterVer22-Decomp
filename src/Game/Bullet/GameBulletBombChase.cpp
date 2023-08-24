@@ -1,14 +1,13 @@
 #include "Game/Bullet/GameBulletBombChase.h"
 #include <math/seadVector.h>
+#include "Game/Cmn/CmnActor.h"
 
 namespace Game{
     void BulletBombChase::setXLinkLocalPropertyDefinition() {
         //not matching yet
     }
 
-    BulletBombChase::BulletBombChase(){
-
-    }
+    BulletBombChase::BulletBombChase()= default;
 
     BulletBombChase::~BulletBombChase()= default;
 
@@ -18,7 +17,7 @@ namespace Game{
     }
      */
 
-    //int BulletBombChase::initializeSender(const int *, int, int, const sead::Vector3<float> &, const sead::Vector3<float> &, short, const int *, const int *, bool, unsigned int, unsigned int) {}
+    int BulletBombChase::initializeSender(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3f const&, short, Game::SighterTarget const*, Game::EnemyBase const*, bool, unsigned int, unsigned int) {}
 
     int BulletBombChase::getSameBombChaseBurstGameFrameNum(unsigned int) const {}
 

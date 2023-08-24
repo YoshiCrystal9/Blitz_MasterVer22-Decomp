@@ -20,7 +20,15 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(BLITZ
         src/Game/Bullet/GameBulletBombChase.cpp
-        include/Game/Bullet/GameBulletBombChase.h)
+        include/Game/Bullet/GameBulletBombChase.h
+        src/Game/Cmn/CmnDef.cpp
+        src/Game/Cmn/CmnAmiiboReadSeq.cpp
+        src/Game/Cmn/CmnCameraBase.cpp
+        include/Game/Cmn/CmnDef.h
+        src/Game/Cmn/CmnActor.cpp
+        src/Game/EnemyBase/GameEnemyBase.cpp
+        src/Game/SighterTarget/GameSighterTarget.cpp
+)
 
 target_include_directories(BLITZ PRIVATE include)
 target_include_directories(BLITZ PRIVATE src)
