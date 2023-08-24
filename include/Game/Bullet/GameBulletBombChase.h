@@ -3,13 +3,15 @@
 
 #include <math/seadVector.h>
 #include "Game/Cmn/CmnActor.h"
+#include "Game/SighterTarget/GameSighterTarget.h"
+#include "Game/EnemyBase/GameEnemyBase.h"
 
 namespace Game{
     class BulletBombChase{
     public:
         BulletBombChase();
         ~BulletBombChase();
-        //int reset(Cmn::Def::ResetType);
+        int reset(Cmn::Def::ResetType);
         int initializeSender(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3f const&, short, Game::SighterTarget const*, Game::EnemyBase const*, bool, unsigned int, unsigned int);
         int getSameBombChaseBurstGameFrameNum(unsigned int) const;
         //virtual int initialize_(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3<float> const&, short, Game::SighterTarget const*, Game::EnemyBase const*, bool, bool, unsigned int) = 0;

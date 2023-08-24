@@ -3,7 +3,7 @@
 
 namespace Game {
 
-    class GameEnemyBase {
+    class EnemyBase {
 
     };
 

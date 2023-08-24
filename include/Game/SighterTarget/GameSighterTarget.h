@@ -3,7 +3,7 @@
 
 namespace Game {
 
-    class GameSighterTarget {
+    class SighterTarget {
 
     };
 

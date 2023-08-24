@@ -1,6 +1,4 @@
 #include "Game/Bullet/GameBulletBombChase.h"
-#include <math/seadVector.h>
-#include "Game/Cmn/CmnActor.h"
 
 namespace Game{
     void BulletBombChase::setXLinkLocalPropertyDefinition() {
