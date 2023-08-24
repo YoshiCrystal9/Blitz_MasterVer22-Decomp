@@ -1,6 +1,7 @@
 #include "Game/Bullet/GameBulletBombChase.h"
 
 namespace Game{
+
     void BulletBombChase::setXLinkLocalPropertyDefinition() {
         //not matching yet
     }
@@ -9,11 +10,9 @@ namespace Game{
 
     BulletBombChase::~BulletBombChase()= default;
 
-    /*
     int BulletBombChase::reset(Cmn::Def::ResetType) {
         //implementar cmn def reset type
     }
-     */
 
     int BulletBombChase::initializeSender(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3f const&, short, Game::SighterTarget const*, Game::EnemyBase const*, bool, unsigned int, unsigned int) {}
 

@@ -3,6 +3,7 @@
 
 #include <math/seadVector.h>
 #include "Game/Cmn/CmnActor.h"
+#include "Game/Cmn/CmnDef.h"
 #include "Game/SighterTarget/GameSighterTarget.h"
 #include "Game/EnemyBase/GameEnemyBase.h"
 

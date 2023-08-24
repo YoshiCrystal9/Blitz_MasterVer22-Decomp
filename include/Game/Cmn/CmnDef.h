@@ -4,7 +4,10 @@
 namespace Cmn {
 
     class Def {
+    public:
+        enum ResetType{
 
+        };
     };
 
 } // Cmn
