@@ -1,4 +1,4 @@
-#include "GameDecoy.h"
+#include "Game/Decoy/GameDecoy.h"
 
 namespace Game {
     bool Decoy::isAbleToBeCulled() const {

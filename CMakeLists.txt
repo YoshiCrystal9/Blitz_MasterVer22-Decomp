@@ -57,6 +57,9 @@ add_executable(BLITZ
         src/Game/AirBall/GameAttachableAirBall.cpp
         src/Game/Decoy/GameDecoy.cpp
         src/Game/GameExplanationText.cpp
+        src/Game/GameFlyingHoheiLauncher.cpp
+        src/Game/InkRail/GameInkRail.cpp
+        src/Game/Lift/GameLift.cpp
 )
 
 target_include_directories(BLITZ PRIVATE include)
