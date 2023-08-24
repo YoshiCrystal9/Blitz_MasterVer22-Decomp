@@ -7,6 +7,7 @@
 #include "Game/SighterTarget/GameSighterTarget.h"
 #include "Game/EnemyBase/GameEnemyBase.h"
 #include "Lp/Sys/LpSys.h"
+#include "Game/Bullet/GameBulletSimple.h"
 
 namespace Game{
     class BulletBombChase{
@@ -15,7 +16,7 @@ namespace Game{
         ~BulletBombChase();
         int reset(Cmn::Def::ResetType);
         int initializeSender(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3f const&, short, Game::SighterTarget const*, Game::EnemyBase const*, bool, unsigned int, unsigned int);
-        int getSameBombChaseBurstGameFrameNum(unsigned int) const;
+        int getSameBombChaseBurstGameFrameNum(unsigned int burstgameframenum) const;
         int initialize_(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3f const&, short, Game::SighterTarget const*, Game::EnemyBase const*, bool, bool, unsigned int);
         int initializeReceiver(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3f const&, short, unsigned int, unsigned int);
         void setXLinkLocalPropertyDefinition();

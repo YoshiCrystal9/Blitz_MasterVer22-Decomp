@@ -60,6 +60,7 @@ add_executable(BLITZ
         src/Game/GameFlyingHoheiLauncher.cpp
         src/Game/InkRail/GameInkRail.cpp
         src/Game/Lift/GameLift.cpp
+        src/Game/Bullet/GameBulletSimple.cpp
 )
 
 target_include_directories(BLITZ PRIVATE include)

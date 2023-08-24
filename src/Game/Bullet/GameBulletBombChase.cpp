@@ -8,15 +8,19 @@ namespace Game{
 
     BulletBombChase::BulletBombChase()= default;
 
-    BulletBombChase::~BulletBombChase()= default;
+    BulletBombChase::~BulletBombChase(){
+        operator delete(this);
+    }
 
     int BulletBombChase::reset(Cmn::Def::ResetType) {
-        //implementar cmn def reset type
+
     }
 
     int BulletBombChase::initializeSender(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3f const&, short, Game::SighterTarget const*, Game::EnemyBase const*, bool, unsigned int, unsigned int) {}
 
-    int BulletBombChase::getSameBombChaseBurstGameFrameNum(unsigned int) const {}
+    int BulletBombChase::getSameBombChaseBurstGameFrameNum(unsigned int burstgameframenum) const {
+        return burstgameframenum >> 4;
+    }
 
     int BulletBombChase::initialize_(Cmn::Actor const*, int, int, sead::Vector3f const&, sead::Vector3<float> const&, short, Game::SighterTarget const*, Game::EnemyBase const*, bool, bool, unsigned int){};
 
