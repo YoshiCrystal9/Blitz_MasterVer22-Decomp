@@ -13,6 +13,8 @@ namespace Game{
     }
 
     int BulletBombChase::reset(Cmn::Def::ResetType) {
+        int result;
+        result = 0;//Game::BulletSimple::reset(Cmn::Def::ResetType);
 
     }
 

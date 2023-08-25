@@ -6,6 +6,7 @@ namespace Cmn {
     class Def {
     public:
         enum ResetType{
+            Test = 0
 
         };
         enum Team{
