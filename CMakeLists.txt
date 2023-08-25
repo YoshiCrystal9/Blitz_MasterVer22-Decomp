@@ -61,6 +61,14 @@ add_executable(BLITZ
         src/Game/InkRail/GameInkRail.cpp
         src/Game/Lift/GameLift.cpp
         src/Game/Bullet/GameBulletSimple.cpp
+        src/Game/Cmn/CmnKDGndCol.cpp
+        src/Game/Bullet/GameBullet.cpp
+        src/Game/Bullet/GameBulletBombChaseMissionBase.cpp
+        src/Game/Bullet/GameBulletBombPoisonBall.cpp
+        src/Game/Bullet/GameBulletRollerCore.cpp
+        src/Game/Player/GamePlayer.cpp
+        src/Game/Player/GamePlayerNetControl.cpp
+        src/Game/Player/GamePlayerInkAction.cpp
 )
 
 target_include_directories(BLITZ PRIVATE include)

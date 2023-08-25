@@ -28,13 +28,11 @@ namespace Game{
 
     void BulletBombChase::enter() {}
 
-    /*
     void BulletBombChase::genMessage(Lp::Sys::HioContext*) {
-        //not matching yet, needs Lp implementation
+        ;
     }
-     */
 
-    float BulletBombChase::getCheckColSkipNrmDot() {
+    float BulletBombChase::getCheckColSkipNrmDot() const{
         return 0.0f;
     }
     char* BulletBombChase::getClassName() const{
@@ -67,4 +65,32 @@ namespace Game{
     }
 
     void BulletBombChase::setCurPos(sead::Vector3f const&) {}
+
+    int BulletBombChase::getActorTypeId() const {
+        return 66;
+    }
+
+    int BulletBombChase::getClassIterNode() {
+        return BulletBombChase::getClassIterNodeStatic();
+    }
+
+    void BulletBombChase::emitObjSplash_(sead::Vector3f const& vec1, sead::Vector3f const& vec2, Game::Bullet::ArmorType armortype, Cmn::Def::Team team, bool var){
+        ;
+    }
+
+    bool BulletBombChase::isThroughControlledPlayer() const {
+        return true;
+    }
+
+    bool BulletBombChase::isHitActionGndAndWall() const {
+        return true;
+    }
+
+    bool BulletBombChase::isUseCollisionMoveInfo() const {
+        return true;
+    }
+
+    bool BulletBombChase::isPaintLocalType(Cmn::KDGndCol::HitInfo::PaintType type, bool var1) const {
+        return (var1 == 2) | 0 & 1; // 0 is a placeholder for Game::BulletSimple::isPaintLocalType(type, var1), needs to be finished
+    }
 }

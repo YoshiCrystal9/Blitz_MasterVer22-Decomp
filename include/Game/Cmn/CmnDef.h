@@ -8,6 +8,9 @@ namespace Cmn {
         enum ResetType{
 
         };
+        enum Team{
+
+        };
     };
 
 } // Cmn

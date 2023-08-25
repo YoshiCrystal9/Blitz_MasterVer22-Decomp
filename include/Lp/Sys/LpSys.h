@@ -4,7 +4,9 @@
 namespace Lp{
     class Sys{
     public:
-        void* HioContext();
+        enum HioContext{
+
+        };
     };
 }
 
