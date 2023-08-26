@@ -9,6 +9,8 @@ namespace Cmn {
         void enter();
         void preActorCalc();
         void exit();
+        void destroy();
+        void postDestroy();
 
     };
 

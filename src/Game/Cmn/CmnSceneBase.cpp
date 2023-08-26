@@ -16,4 +16,12 @@ namespace Cmn {
     void SceneBase::exit() {
 
     }
+
+    void SceneBase::destroy() {
+
+    }
+
+    void SceneBase::postDestroy() {
+
+    }
 } // Cmn

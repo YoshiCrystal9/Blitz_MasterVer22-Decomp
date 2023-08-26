@@ -69,7 +69,7 @@ add_executable(BLITZ
         src/Game/Player/GamePlayer.cpp
         src/Game/Player/GamePlayerNetControl.cpp
         src/Game/Player/GamePlayerInkAction.cpp
-        include/Game/Params/GameEnemyBallParams.h
+        include/Game/EnemyBase/GameEnemyBallParams.h
         src/Game/Params/GameEnemyBallParams.cpp
         src/Game/Params/GameEnemyParams.cpp
         src/Game/Cmn/CmnMuObj.cpp
@@ -79,6 +79,7 @@ add_executable(BLITZ
         src/Game/Cmn/CmnPlayerInfoAry.cpp
         src/Game/Cmn/CmnCameraAccessor.cpp
         src/Game/Cmn/CmnSceneBase.cpp
+        src/Game/Player/Octa/GamePlayerMissionOctaSeqEntrance.cpp
 )
 
 target_include_directories(BLITZ PRIVATE include)

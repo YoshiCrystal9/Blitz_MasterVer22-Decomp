@@ -90,7 +90,7 @@ namespace Cmn {
 
     }
 
-    int Actor::createComponentHolder_() {
+    [[maybe_unused]] int Actor::createComponentHolder_() {
         return 0;
     }
 
