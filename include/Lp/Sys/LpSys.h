@@ -4,7 +4,13 @@
 namespace Lp{
     class Sys{
     public:
+        class Actor{
+        public:
+            void actorOnRemove();
+            void dbgOnAfterSleepBeforeReActivate(bool a);
+        };
         enum HioContext{
+            test
 
         };
     };

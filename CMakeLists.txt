@@ -69,6 +69,16 @@ add_executable(BLITZ
         src/Game/Player/GamePlayer.cpp
         src/Game/Player/GamePlayerNetControl.cpp
         src/Game/Player/GamePlayerInkAction.cpp
+        include/Game/Params/GameEnemyBallParams.h
+        src/Game/Params/GameEnemyBallParams.cpp
+        src/Game/Params/GameEnemyParams.cpp
+        src/Game/Cmn/CmnMuObj.cpp
+        src/Game/Cmn/CmnBcatFileCache.cpp
+        src/Game/Cmn/CmnBcatMgr.cpp
+        src/Game/Cmn/CmnLeaguePointCalculator.cpp
+        src/Game/Cmn/CmnPlayerInfoAry.cpp
+        src/Game/Cmn/CmnCameraAccessor.cpp
+        src/Game/Cmn/CmnSceneBase.cpp
 )
 
 target_include_directories(BLITZ PRIVATE include)
