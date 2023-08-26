@@ -4,6 +4,11 @@
 namespace Cmn {
 
     class SceneBase {
+    public:
+        void load();
+        void enter();
+        void preActorCalc();
+        void exit();
 
     };
 
