@@ -79,7 +79,12 @@ add_executable(BLITZ
         src/Game/Cmn/CmnPlayerInfoAry.cpp
         src/Game/Cmn/CmnCameraAccessor.cpp
         src/Game/Cmn/CmnSceneBase.cpp
-        src/Game/Player/Octa/GamePlayerMissionOctaSeqEntrance.cpp
+        src/Game/Player/Octa/GamePlayerMissionOcta.cpp
+        src/Game/Player/GamePlayerMission.cpp
+        src/Game/Player/GamePlayerSpectator.cpp
+        src/Game/Plaza/GamePlaza.cpp
+        src/Game/Cmn/CmnNewsDef.cpp
+        src/Game/Seq/GameSeqBase.cpp
 )
 
 target_include_directories(BLITZ PRIVATE include)

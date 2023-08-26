@@ -13,6 +13,9 @@ namespace Lp{
             test
 
         };
+        enum HioPropertyEvent{
+            test1
+        };
     };
 }
 

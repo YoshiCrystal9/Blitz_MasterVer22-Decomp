@@ -12,4 +12,24 @@ namespace Game {
     bool Player::isInSpecial_Shelter() const {
         return false;
     }
+
+    void PlayerSquidCannon::calc() {
+
+    }
+
+    void PlayerSuperArmor::setup() {
+
+    }
+
+    void PlayerSuperLanding::stateNone() {
+
+    }
+
+    void PlayerSuperLanding::stateEnterWaitN() {
+
+    }
+
+    void PlayerSuperLanding::stateEnterDropD() {
+
+    }
 } // Game
