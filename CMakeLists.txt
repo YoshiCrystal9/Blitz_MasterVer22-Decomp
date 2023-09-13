@@ -96,13 +96,13 @@ target_compile_options(BLITZ PRIVATE -Wno-unused-parameter -Wno-unused-private-f
 target_compile_options(BLITZ PRIVATE -fno-strict-aliasing)
 target_compile_options(BLITZ PRIVATE -Wno-invalid-offsetof)
 
-set(NN_SDK_MAJOR 4)
+set(NN_SDK_MAJOR 3)
 set(NN_SDK_MINOR 4)
-set(NN_SDK_PATCH 0)
+set(NN_SDK_PATCH 1)
 set(NN_SDK_TYPE "Release")
 
-set(NN_WARE_MAJOR 1)
-set(NN_WARE_MINOR 6)
+set(NN_WARE_MAJOR 3)
+set(NN_WARE_MINOR 4)
 set(NN_WARE_PATCH 1)
 
 include_directories(lib)
